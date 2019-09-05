@@ -16,18 +16,18 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print("Start");
+        // #print("Start");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        print("Update");
+        // #print("Update");
 
         //membaca posisi player dan menyimpannya ke variabel playerPos
         playerPos = transform.position;
-        print("Posisi player: " + playerPos);
+        // #print("Posisi player: " + playerPos);
         posX = transform.position.x;
         posY = transform.position.y;
         posZ = transform.position.z;
