@@ -24,33 +24,34 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         // #print("Update");
-
+        if(ScoreScript.Instance.nyawa > 0){
         //membaca posisi player dan menyimpannya ke variabel playerPos
-        playerPos = transform.position;
-        // #print("Posisi player: " + playerPos);
-        posX = transform.position.x;
-        posY = transform.position.y;
-        posZ = transform.position.z;
-        /*untuk menandakan ini desimal (float) harus dikasih f setelah mengisi angka
-        posX += 0.01f;*/
-        posX += speedX;
-        //transform.position = new Vector3(posX, posY, posZ);
-        if (Input.GetAxis("Horizontal") > 0)
-        {
-            transform.Translate(speedX, 0, 0);
-        }
-        else if (Input.GetAxis("Horizontal") < 0)
-        {
-            transform.Translate(-speedX, 0, 0);
-        }
+            playerPos = transform.position;
+            // #print("Posisi player: " + playerPos);
+            posX = transform.position.x;
+            posY = transform.position.y;
+            posZ = transform.position.z;
+            /*untuk menandakan ini desimal (float) harus dikasih f setelah mengisi angka
+            posX += 0.01f;*/
+            posX += speedX;
+            //transform.position = new Vector3(posX, posY, posZ);
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                transform.Translate(speedX, 0, 0);
+            }
+            else if (Input.GetAxis("Horizontal") < 0)
+            {
+                transform.Translate(-speedX, 0, 0);
+            }
 
-        if (Input.GetAxis("Vertical") > 0)
-        {
-            transform.Translate(0, speedY, speedZ);
-        }
-        else if (Input.GetAxis("Vertical") < 0)
-        {
-            transform.Translate(0, -speedY, 0);
-        }
+            if (Input.GetAxis("Vertical") > 0)
+            {
+                transform.Translate(0, speedY, speedZ);
+            }
+            else if (Input.GetAxis("Vertical") < 0)
+            {
+                transform.Translate(0, -speedY, 0);
+            }
+            }
     }
 }
