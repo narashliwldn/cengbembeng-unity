@@ -6,6 +6,7 @@ TagManager:
   tags:
   - coin
   - shot
+  - musicBtn
   layers:
   - Default
   - TransparentFX
