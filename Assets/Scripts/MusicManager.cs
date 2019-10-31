@@ -9,6 +9,7 @@ public class MusicManager : MonoBehaviour
     AudioSource audioSource;
     public Text musicBtnText;
     public AudioClip[] audioClips;
+    public Slider volumeSlider;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,9 @@ public class MusicManager : MonoBehaviour
     // public void StopBGM(){
     //     audioSource.Stop();
     // }
+    public void SetVolume(){
+        audioSource.volume = volumeSlider.value;
+    }
     public void SetMusic(int id){
         audioSource.clip = audioClips[id];
         audioSource.Play();
